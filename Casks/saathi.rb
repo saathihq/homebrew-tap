@@ -2,8 +2,7 @@ cask "saathi" do
   version "0.5.0"
   sha256 "8898b7e40b88d93907f20d3217a292157e9046ee4c65c310ae8174ca008cb487"
 
-  url "https://github.com/saathihq/saathi/releases/download/v#{version}/Saathi-#{version}.zip",
-      verified: "github.com/saathihq/saathi/"
+  url "https://github.com/saathihq/saathi/releases/download/v#{version}/Saathi-#{version}.zip"
   name "Saathi"
   desc "Companion for learning and playing with new things, driven by voice"
   homepage "https://github.com/saathihq/saathi"
@@ -13,7 +12,7 @@ cask "saathi" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   # Both stanzas, on purpose.
   #
