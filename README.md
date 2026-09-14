@@ -4,11 +4,17 @@ Homebrew tap for [Saathi](https://github.com/saathihq/saathi) — a companion fo
 playing with new things, approached from the accessibility side.
 
 ```bash
+brew trust saathihq/tap
 brew tap saathihq/tap
 brew install --cask saathi
 ```
 
 `Saathi.app` is installed to `/Applications` and `saathi` is put on your PATH.
+
+**The `brew trust` step is not optional.** Homebrew 6 refuses to load a cask from a third-party tap
+until you say you trust it — a cask is Ruby that runs on your machine, so it is asking a fair
+question. Without it, `brew tap` fails with `Refusing to load cask ... from untrusted tap`. Every
+third-party cask tap needs this now; it is not specific to Saathi.
 
 ## Why a tap rather than homebrew-cask
 
